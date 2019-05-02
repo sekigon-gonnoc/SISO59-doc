@@ -40,7 +40,9 @@
 
 1. 展開したディレクトリをmsys2などビルド環境の環境変数に設定する
 
-	```export NRFSDK_VER12=<path to SDK>```
+    ```
+    export NRFSDK12_ROOT=<path to sdk> #例 /c/dev/nRF5_SDK_15.0.0_a53641a
+    ```
 
 1. マスタ・スレーブそれぞれのファームウェアをビルドする
 
