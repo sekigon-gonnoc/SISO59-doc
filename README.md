@@ -38,12 +38,13 @@
   nrf52対応のqmk_firmwareは[こちら](https://github.com/sekigon-gonnoc/qmk_firmware/tree/nrf52)
 
 	- 既にqmk_firmwareを使っている場合
-
+	```
         git remote add sekigon https://github.com/sekigon-gonnoc/qmk_firmware.git
         git pull sekigon nrf52
         git checkout nrf52
+	```
 	
-	 または
+	 	　　　または
 	 
 		git clone  -b nrf52 https://github.com/sekigon-gonnoc/qmk_firmware.git ble_micro_pro
 	  
@@ -67,7 +68,7 @@
 
 
 ### 本体へのファームウェア書き込み
-1. マスタ・スレーブそれぞれのファームウェアをビルドする
+1. マスタ(デフォルトは左手・スレーブ(右手)それぞれのファームウェアをビルドする
 
     ```
     make siso59/master:default
@@ -88,6 +89,8 @@
 
 1. UPLOADを押し、書き込みを開始
 
+無線のみの動作であれば、これで書き込みは終了です。ペアリングの項を参照してください。
+
 ### BlackPillペンダントへのファームウェア書き込み
 
 1. ファームウェアをビルドする
@@ -103,4 +106,21 @@
     ```
     dfu-util -d 1eaf:0003 -a 2 -D <firmware.bin>
     ```
+
+
+## 動作確認
+
+1. スレーブ側のみを起動し、スマートフォン等からBluetoothデバイスのスキャンを実行
+
+1. デバイス一覧に**Nordic UART**という表示があることを確認したら、マスタ側を起動。マスタとスレーブのペアリングが自動的に実行される
+
+1. デバイス一覧から**Nordic UART**という表示が消え、代わりに**SISO59**が表示されることを確認後、ペアリングを実行
+
+以上の手順により、無線キーボードとしての動作確認ができます。
+これ以降、スレーブ側のみを起動したとしても**Nordic UART**はデバイス一覧に表示されません。
+
+## トラブルシューティング
+### ペアリングが出来ない・出来なくなった
+
+端末とマスタのペアリング情報を削除してから再ペアリングを実行してみてください
 
