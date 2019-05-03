@@ -1,4 +1,5 @@
 # SISO59 ビルドガイド
+質問は[discord](https://discordapp.com/invite/zXCss8T) または作者Twitter(@_gonnoc)まで
 ## 本体組み立て
 
 1. スイッチ用ソケットをはんだ付けする
@@ -96,7 +97,7 @@
 1. ファームウェアをビルドする
 
     ```
-    make siso59/bp_pendant:bp_pendant
+    make siso59/pendant:bp_pendant
     ```
 
 1. dfu-utilを使って書きこむ
