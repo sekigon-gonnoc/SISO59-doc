@@ -71,6 +71,8 @@
 ### 本体へのファームウェア書き込み
 1. マスタ(デフォルトは左手・スレーブ(右手)それぞれのファームウェアをビルドする
 
+	 - 有線接続に対応させる場合、それぞれのconfig.hにUSE_AS_I2C_SLAVEを定義してください
+
     ```
     make siso59/master:default
     make siso59/slave:default
