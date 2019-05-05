@@ -41,8 +41,8 @@
 	- 既にqmk_firmwareを使っていて別のブランチとして用意したい場合
 	```
         git remote add sekigon https://github.com/sekigon-gonnoc/qmk_firmware.git
-        git pull sekigon nrf52
-        git checkout nrf52
+        git fetch sekigon
+        git checkout -b nrf52 sekigon/nrf52
 	```
 	
 	- 既にqmk_firmwareを使っていて別のフォルダに置きたい場合
