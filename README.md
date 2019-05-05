@@ -38,20 +38,24 @@
 1. リポジトリを取得する
   nrf52対応のqmk_firmwareは[こちら](https://github.com/sekigon-gonnoc/qmk_firmware/tree/nrf52)
 
-	- 既にqmk_firmwareを使っている場合
+	- 既にqmk_firmwareを使っていて別のブランチとして用意したい場合
 	```
         git remote add sekigon https://github.com/sekigon-gonnoc/qmk_firmware.git
         git pull sekigon nrf52
         git checkout nrf52
 	```
 	
-	 	　　　または
-	 
+	- 既にqmk_firmwareを使っていて別のフォルダに置きたい場合
+	  
+	 ```
 		git clone  -b nrf52 https://github.com/sekigon-gonnoc/qmk_firmware.git ble_micro_pro
+	 ```
 	  
 	- 初めて使う場合
-
+	
+	```
         git clone --depth 1 -b nrf52 https://github.com/sekigon-gonnoc/qmk_firmware.git
+	```
 
 1. 必要サブモジュールを用意
 
@@ -65,17 +69,17 @@
 
     ```
     export NRFSDK12_ROOT=<path to sdk> #例 /c/dev/nRF5_SDK_12.3.0_d7731ad
+    ```    
     
 ### nrfutilのセットアップ(Windows(MSYS2))
 [nrfutil.exe](https://github.com/NordicSemiconductor/pc-nrfutil/releases)をダウンロードし、~/qmk_utilに保存します。
 
 ### nrfutilのセットアップ(Mac, Linux)
 pipでnrfutilを入れます。(python2.7)
-    
-    pip install nrfutil
 
-    ```
-
+```
+pip install nrfutil
+```
 
 ### 本体へのファームウェア書き込み
 1. マスタ(デフォルトは左手・スレーブ(右手)それぞれのファームウェアをビルドする
