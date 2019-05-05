@@ -74,8 +74,8 @@
 	 - 有線接続に対応させる場合、それぞれのconfig.hにUSE_AS_I2C_SLAVEを定義してください
 
     ```
-    make siso59/master:default
-    make siso59/slave:default
+    make siso59/master:default:dfu_ble
+    make siso59/slave:default:dfu_ble
     ```
 
 1. 完成したzipファイルをスマートフォンに移動、あるいは共有フォルダに移動する
