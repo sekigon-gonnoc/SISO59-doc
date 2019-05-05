@@ -65,6 +65,15 @@
 
     ```
     export NRFSDK12_ROOT=<path to sdk> #例 /c/dev/nRF5_SDK_12.3.0_d7731ad
+    
+### nrfutilのセットアップ(Windows(MSYS2))
+[nrfutil.exe](https://github.com/NordicSemiconductor/pc-nrfutil/releases)をダウンロードし、~/qmk_utilに保存します。
+
+### nrfutilのセットアップ(Mac, Linux)
+pipでnrfutilを入れます。(python2.7)
+    
+    pip install nrfutil
+
     ```
 
 
